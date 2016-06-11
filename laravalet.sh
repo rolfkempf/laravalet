@@ -42,7 +42,7 @@ sed -i '' '/^DB_/d' ./.env
 echo "DB_CONNECTION=sqlite" >> ./.env
 
 #run npm
-#npm install
+npm install
 
 #open 'folder-name' in browser
 open "http://.$DIR.dev"
