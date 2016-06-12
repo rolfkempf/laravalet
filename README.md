@@ -1,7 +1,12 @@
 # Laravalet
-Setup a Laravel instance super-quickly in a "parked" directory (using Valet)
 
-I built this script to setup new Laravel applications. It uses the laravel installer as well as Valet. 
+Valet already has made setting up a new Laravel install a breeze, so what is Laravalet for? 
+My personal use-case is this:
+- go to a directory where `valet park` was run before
+- run `laravalet my-project` 
+- start coding
+
+The script uses the laravel installer to create a new app, changes the databse-config to use sqlite and opens the app in a browser window. Comes in pretty handy if you want to try composer packages or just want to get started quickly.
 
 ##How to use
 
