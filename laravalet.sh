@@ -54,5 +54,5 @@ valet link ${DIR}
 #open 'folder-name' in browser
 open "http://${PWD##*/}.localhost"
 
-#open in phpstorm
+#open in file-browser
 open .
