@@ -33,7 +33,7 @@ mv laravel-tmp/* ./
 rm -rf laravel-tmp
 
 #create sqlite-database-file
-touch database/databse.sqlite
+touch database/database.sqlite
 
 #remove all database related lines from .env
 sed -i '' '/^DB_/d' ./.env
@@ -42,7 +42,17 @@ sed -i '' '/^DB_/d' ./.env
 echo "DB_CONNECTION=sqlite" >> ./.env
 
 #run npm
-npm install
+yarn
+
+#composer
+composer require barryvdh/laravel-debugbar --dev
+composer require barryvdh/laravel-ide-helper --dev
+
+#valet
+valet link ${DIR}
 
 #open 'folder-name' in browser
-open "http://.$DIR.dev"
+open "http://${PWD##*/}.localhost"
+
+#open in phpstorm
+open .
